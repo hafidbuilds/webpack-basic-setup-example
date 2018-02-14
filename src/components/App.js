@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Order from './Order';
 import Inventory from './Inventory';
@@ -6,6 +7,7 @@ import Fish from './Fish';
 import sampleFishes from '../sample-fishes';
 
 class App extends React.Component {
+
   constructor() {
     super();
     // getinitialState
@@ -40,7 +42,9 @@ class App extends React.Component {
           </ul>
         </div>
         <Order />
-        <Inventory addFish={this.addFish} loadSamples={this.loadSamples} />
+        <Inventory 
+          addFish={this.addFish} 
+          loadSamples={this.loadSamples} />
       </div>
     )
   }
